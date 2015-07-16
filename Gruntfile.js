@@ -108,7 +108,34 @@ module.exports = function(grunt) {
           }
         }
       }
-    }
+    },
+    processhtml: {
+        options: {
+
+        },
+        dev: {
+            options: {
+                process: true,
+                data: {
+                    env: 'dev'
+                }
+            },
+            files: {
+                'index.html': ['index.html.tpl']
+            }
+        },
+        prod: {
+            options: {
+                process: true,
+                data: {
+                    env: 'prod'
+                }
+            },
+            files: {
+                'wellcome_message.php': ['index.html.tpl']
+            }
+        }
+      }
   });
 
   // These plugins provide necessary tasks.
@@ -120,6 +147,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-processhtml');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'clean', 'requirejs', 'concat', 'uglify']);

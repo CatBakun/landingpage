@@ -1,6 +1,9 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+
+    <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,8 +73,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </footer>
 
     </div> <!-- /container -->
-
-    <script data-main="app/config" src="dist/require.min.js"></script>
+    
+        <script data-main="app/config" src="dist/require.min.js"></script>
+    
   </body>
 </html>
 

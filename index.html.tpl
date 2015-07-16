@@ -1,4 +1,8 @@
-
+<% if (env === 'prod') { %>
+    <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+    ?>
+<% } %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,9 +73,11 @@
       </footer>
 
     </div> <!-- /container -->
-    
+    <% if (environment === 'dev') { %>
         <script data-main="app/config" src="bower_components/requirejs/require.js"></script>
-    
+    <% } else { %>
+        <script data-main="app/config" src="dist/require.min.js"></script>
+    <% } %>
   </body>
 </html>
 
