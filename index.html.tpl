@@ -76,7 +76,7 @@
     <% if (environment === 'dev') { %>
         <script data-main="app/config" src="bower_components/requirejs/require.js"></script>
     <% } else { %>
-        <script data-main="app/config" src="dist/require.min.js"></script>
+        <script data-main="app/config" src="webapp/dist/require.min.js"></script>
     <% } %>
   </body>
 </html>
