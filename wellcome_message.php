@@ -70,6 +70,7 @@
 
     </div> <!-- /container -->
     
+        <link rel="stylesheet" href="webapp/dist/require.css"></link>
         <script data-main="app/config" src="webapp/dist/require.min.js"></script>
     
   </body>

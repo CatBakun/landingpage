@@ -77,7 +77,8 @@ module.exports = function(grunt) {
           name: 'config',
           mainConfigFile: 'app/config.js',
           out: '<%= concat.dist.dest %>',
-          optimize: 'none'
+          optimize: 'none',
+          separateCSS: true
         }
       }
     },
@@ -92,18 +93,15 @@ module.exports = function(grunt) {
           keepalive: true,
           port: 8000,
           middleware: function(connect, options) {
-              console.log(options);
             return [
               // rewrite requirejs to the compiled version
               function(req, res, next) {
-                  console.log(req, res, next);
                 if (req.url === '/bower_components/requirejs/require.js') {
                   req.url = '/dist/require.min.js';
                 }
                 next();
               },
               connect.static(options.base[0]),
-
             ];
           }
         }
