@@ -5,7 +5,8 @@ require.config({
     'components': '../bower_components',
     'jquery': '../bower_components/jquery/dist/jquery',
     'bootstrapJS': '../bower_components/bootstrap/dist/js/bootstrap',
-    'bootstrapCSS': '../bower_components/bootstrap/dist/css/bootstrap'
+    'bootstrapCSS': '../bower_components/bootstrap/dist/css/bootstrap',
+    'async': '../bower_components/requirejs-plugins/src/async'
   },
   shim: {
       'bootstrapJS': {

@@ -70,6 +70,13 @@ module.exports = function(grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
+      processhtml: {
+          files: './index.html.tpl',
+          tasks: ['processhtml'],
+          options: {
+              spawn: false
+          }
+      }
     },
     requirejs: {
       compile: {
@@ -133,6 +140,9 @@ module.exports = function(grunt) {
                 'wellcome_message.php': ['index.html.tpl']
             }
         }
+      },
+      concurrent: {
+          preview: ['watch:processhtml', 'connect:development']
       }
   });
 
@@ -146,10 +156,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-concurrent');
 
   // Default task.
   grunt.registerTask('default', ['processhtml', 'jshint', 'clean', 'requirejs', 'concat', 'uglify']);
-  grunt.registerTask('preview', ['processhtml', 'connect:development']);
+  grunt.registerTask('preview', ['concurrent:preview']);
   grunt.registerTask('preview-live', ['default', 'connect:production']);
 
 };
