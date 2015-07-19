@@ -76,6 +76,10 @@ module.exports = function(grunt) {
           options: {
               spawn: false
           }
+      },
+      toBuild: {
+        files: ['app/**/*'],
+        tasks: ['clean', 'requirejs', 'concat', 'uglify']
       }
     },
     requirejs: {
@@ -142,7 +146,7 @@ module.exports = function(grunt) {
         }
       },
       concurrent: {
-          preview: ['watch:processhtml', 'connect:development']
+          preview: ['watch:processhtml', 'watch:toBuild', 'connect:development']
       }
   });
 

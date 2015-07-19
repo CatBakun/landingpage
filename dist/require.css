@@ -6887,6 +6887,15 @@ body {
     height: 250px;
     margin: 0;
     padding: 0;
+}.contact-form {
+    margin-top: 20px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .contact-form {
+        margin-top: 0px;
+    }
 }.footer {
-    margin-top: 40px;
+    margin-top: 20px;
 }
