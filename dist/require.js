@@ -14087,6 +14087,7 @@ define('main',[
             .done(function(){
                 $('#thumbnail-modal .modal-title').text('Mensaje enviado');
                 $('#thumbnail-modal .modal-body').text('Nos vamos a contactar con usted.');
+                $('form').find('input, textarea').val('');
             })
             .fail(function(){
                 $('#thumbnail-modal .modal-title').text('No se envió el mensaje ');
