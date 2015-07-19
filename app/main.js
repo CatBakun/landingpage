@@ -30,7 +30,7 @@ define([
         $('#thumbnail-modal .modal-title').text('Espre');
         $('#thumbnail-modal .modal-body').text('Su mensaje se esta enviando');
         $('#thumbnail-modal .modal-body').attr('disabled', 'disabled');
-        $('#thumbnail-modal').on('shown.bs.modal', function(){
+        $('#thumbnail-modal').one('shown.bs.modal', function(){
             $.post( "/index.php/contact", $( "form" ).serialize())
             .done(function(){
                 $('#thumbnail-modal .modal-title').text('Mensaje enviado');
