@@ -14016,6 +14016,8 @@ define('../bower_components/require-css/css!../app/css/map',[],function(){});
 define('../bower_components/require-css/css!../app/css/contact-form',[],function(){});
 
 define('../bower_components/require-css/css!../app/css/footer',[],function(){});
+
+define('../bower_components/require-css/css!../app/css/modal',[],function(){});
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014-2015 Twitter, Inc.
@@ -14051,6 +14053,7 @@ define('main',[
     'css!../app/css/map.css',
     'css!../app/css/contact-form.css',
     'css!../app/css/footer.css',
+    'css!../app/css/modal.css',
     '../app/js/ie10-viewport-bug-workaround'
 ], function() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -14061,6 +14064,11 @@ define('main',[
         position: map.getCenter(),
         map: map,
         title: 'Click to zoom'
+    });
+
+    $('[data-target="#thumbnail-modal"]').on('click', function(e){
+        $('#thumbnail-modal .modal-body').html($(this).find('img').clone());
+        $('#thumbnail-modal .modal-title').html($(this).data('modal-title'));
     });
 });
 

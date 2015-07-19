@@ -7,6 +7,7 @@ define([
     'css!../app/css/map.css',
     'css!../app/css/contact-form.css',
     'css!../app/css/footer.css',
+    'css!../app/css/modal.css',
     '../app/js/ie10-viewport-bug-workaround'
 ], function() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
@@ -17,5 +18,10 @@ define([
         position: map.getCenter(),
         map: map,
         title: 'Click to zoom'
+    });
+
+    $('[data-target="#thumbnail-modal"]').on('click', function(e){
+        $('#thumbnail-modal .modal-body').html($(this).find('img').clone());
+        $('#thumbnail-modal .modal-title').html($(this).data('modal-title'));
     });
 });
