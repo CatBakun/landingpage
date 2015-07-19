@@ -1,4 +1,4 @@
-/*! landingpage - v0.0.0 - 2015-07-16
+/*! landingpage - v0.0.0 - 2015-07-19
 * Copyright (c) 2015 Author Name; Licensed MIT */
 //Not using strict: uneven strict support in browsers, #392, and causes
 //problems with requirejs.exec()/transpiler plugins that may not be strict.
@@ -2085,6 +2085,46 @@ var requirejs, require, define;
     //Set up with config info.
     req(cfg);
 }(this));
+
+define('async',[],function(){
+
+    var DEFAULT_PARAM_NAME = 'callback',
+        _uid = 0;
+
+    function injectScript(src){
+        var s, t;
+        s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
+        t = document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s,t);
+    }
+
+    function formatUrl(name, id){
+        var paramRegex = /!(.+)/,
+            url = name.replace(paramRegex, ''),
+            param = (paramRegex.test(name))? name.replace(/.+!/, '') : DEFAULT_PARAM_NAME;
+        url += (url.indexOf('?') < 0)? '?' : '&';
+        return url + param +'='+ id;
+    }
+
+    function uid() {
+        _uid += 1;
+        return '__async_req_'+ _uid +'__';
+    }
+
+    return{
+        load : function(name, req, onLoad, config){
+            if(config.isBuild){
+                onLoad(null); //avoid errors on the optimizer
+            }else{
+                var id = uid();
+                //create a global variable that stores onLoad so callback
+                //function can define new module after async load
+                window[id] = onLoad;
+                injectScript(formatUrl(req.toUrl(name), id));
+            }
+        }
+    };
+});
+
 
 /*!
  * jQuery JavaScript Library v2.1.4
@@ -13970,6 +14010,12 @@ define('../bower_components/require-css/css',[],function() {
 define('../bower_components/require-css/css!bootstrapCSS',[],function(){});
 
 define('../bower_components/require-css/css!../app/css/jumbotron-narrow',[],function(){});
+
+define('../bower_components/require-css/css!../app/css/map',[],function(){});
+
+define('../bower_components/require-css/css!../app/css/contact-form',[],function(){});
+
+define('../bower_components/require-css/css!../app/css/footer',[],function(){});
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
  * Copyright 2014-2015 Twitter, Inc.
@@ -13997,13 +14043,25 @@ define('../bower_components/require-css/css!../app/css/jumbotron-narrow',[],func
 define("../app/js/ie10-viewport-bug-workaround", function(){});
 
 define('main',[
+    'async!https://maps.googleapis.com/maps/api/js?v=3.exp',
     'jquery',
     'bootstrapJS',
     'css!bootstrapCSS',
     'css!../app/css/jumbotron-narrow.css',
+    'css!../app/css/map.css',
+    'css!../app/css/contact-form.css',
+    'css!../app/css/footer.css',
     '../app/js/ie10-viewport-bug-workaround'
 ], function() {
-
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 16,
+        center: {lat: -27.472346, lng: -58.832968} 
+    });
+    new google.maps.Marker({
+        position: map.getCenter(),
+        map: map,
+        title: 'Click to zoom'
+    });
 });
 
 require.config({
@@ -14013,7 +14071,8 @@ require.config({
     'components': '../bower_components',
     'jquery': '../bower_components/jquery/dist/jquery',
     'bootstrapJS': '../bower_components/bootstrap/dist/js/bootstrap',
-    'bootstrapCSS': '../bower_components/bootstrap/dist/css/bootstrap'
+    'bootstrapCSS': '../bower_components/bootstrap/dist/css/bootstrap',
+    'async': '../bower_components/requirejs-plugins/src/async'
   },
   shim: {
       'bootstrapJS': {

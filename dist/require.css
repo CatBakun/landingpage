@@ -6847,7 +6847,23 @@ body {
   height: 535px;
 }
 
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
 
+.trade {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -6866,4 +6882,11 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+#map-canvas {
+    height: 250px;
+    margin: 0;
+    padding: 0;
+}.footer {
+    margin-top: 40px;
 }
