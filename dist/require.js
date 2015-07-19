@@ -14070,6 +14070,22 @@ define('main',[
         $('#thumbnail-modal .modal-body').html($(this).find('img').clone());
         $('#thumbnail-modal .modal-title').html($(this).data('modal-title'));
     });
+
+    $('form').on('submit', function(e){
+        e.preventDefault();
+        console.log($(this));
+        $.post( "/index.php/contact", $( "form" ).serialize())
+        .done(function(data){
+            $('#thumbnail-modal .modal-title').text('Mensaje enviado');
+            $('#thumbnail-modal .modal-body').text('Nos vamos a contactar con usted.');
+            $('#thumbnail-modal').modal('show');
+        })
+        .fail(function(){
+            $('#thumbnail-modal .modal-title').text('No se envió el mensaje ');
+            $('#thumbnail-modal .modal-body').text('Verifique su conexion a internet o intente mas tarde.');
+            $('#thumbnail-modal').modal('show');
+        });
+    });
 });
 
 require.config({
