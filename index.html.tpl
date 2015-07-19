@@ -104,13 +104,13 @@
 
         <form class="contact-form col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="mensaje" rows="3"></textarea>
+            <textarea class="form-control" name="mensaje" rows="3" required></textarea>
           </div>
           <button type="submit" class="btn btn-default btn-block">Submit</button>
         </form>
