@@ -25,7 +25,19 @@
   </head>
 
   <body>
-
+    <div id="loading"></div>
+    <style>
+    #loading {
+      background-image: url('app/img/loading.gif');
+      background-position: 50% 50%;
+      background-color: #FFF;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-repeat: no-repeat;
+    }
+    </style>
     <div class="container-fluid container-top">
       <div class="container container-top-inner">
         <div class="row">
@@ -77,7 +89,7 @@
             data-modal-image="modal-cocina.jpg"
             data-modal-image-mobile="modal-cocina-mobile.jpg"
             data-target="#thumbnail-modal">
-            <img src="app/img/thumbnail-01.png" alt="foto interior 2">
+            <img src="app/img/thumbnail-01.jpg" alt="foto interior 2">
           </a>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
@@ -87,7 +99,7 @@
             data-modal-image-mobile="modal-mesa-mobile.jpg"
             data-modal-title="foto interior"
             data-target="#thumbnail-modal">
-            <img src="app/img/thumbnail-02.png" alt="foto interior 3">
+            <img src="app/img/thumbnail-02.jpg" alt="foto interior 3">
           </a>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
@@ -97,7 +109,7 @@
             data-modal-image-mobile="modal-terraza-mobile.jpg"
             data-modal-title="foto interior"
             data-target="#thumbnail-modal">
-            <img src="app/img/thumbnail-03.png" alt="foto interior 4">
+            <img src="app/img/thumbnail-03.jpg" alt="foto interior 4">
           </a>
         </div>
       </div>
@@ -106,9 +118,9 @@
         <div class="col-proyecto col-md-12">
           <h2>PROYECTO</h2>
           <p>
-            SUPERFICIE TOTAL: 1200 2 · PLANTA BAJA + 3 NIVELES · 2 LOCALES COMERCIALES EN
-            PB . MONO AMBIENTES DE 1, 2 Y 3 DORMITORIOS · COCHERAS . QUINCHO Y PARRILLAS
-            EN TERRAZA . PISCINA SOLARIUM EN TERRAZA · PARRILLA INDIVIDUALES EN BALCONES
+            SUPERFICIE TOTAL: 1200 m2 · PLANTA BAJA + 3 NIVELES · 2 LOCALES COMERCIALES EN
+            PB · MONO AMBIENTES DE 1, 2 Y 3 DORMITORIOS · COCHERAS · QUINCHO Y PARRILLAS
+            EN TERRAZA · PISCINA SOLARIUM EN TERRAZA · PARRILLA INDIVIDUALES EN BALCONES
           </p>
         </div>
       </div>
@@ -183,7 +195,7 @@
         </form>
       </div>
       <footer class="footer row">
-        <p>Desarrollado por <strong>Liba</strong></p>
+        <p>Desarrollado por <a href="http://liba.com.ar/"><strong>Liba</strong></a></p>
       </footer>
 
     </div> <!-- /container -->

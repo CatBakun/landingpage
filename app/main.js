@@ -56,4 +56,7 @@ define([
         });
         $('#message-modal').modal('show');
     });
+    $('#loading').fadeOut(200, function(){
+        $('#loading').remove();
+    });
 });

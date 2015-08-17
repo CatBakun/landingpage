@@ -1,8 +1,14 @@
 .footer {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 11px;
 }
 
 .footer p {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.footer p a {
+    color: #777;
 }

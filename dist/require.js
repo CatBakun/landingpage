@@ -14108,6 +14108,9 @@ define('main',[
         });
         $('#message-modal').modal('show');
     });
+    $('#loading').fadeOut(200, function(){
+        $('#loading').remove();
+    });
 });
 
 require.config({
