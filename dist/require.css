@@ -6798,10 +6798,22 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-/* Space out content a bit */
-body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+body,
+.form-control,
+.btn-enviar {
+  background-color: #F2EFF5;
+}
+
+body,
+html,
+.container,
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -6834,17 +6846,11 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 978px;
   }
 }
 .container-narrow > hr {
   margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  background-image: url(../app/../app/img/fachada.jpg);
-  height: 535px;
 }
 
 .row-centered {
@@ -6866,27 +6872,211 @@ body {
 }
 
 /* Responsive: Portrait tablets and up */
+.container {
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+}
+
+.marca-top {
+  margin-top: 10px;
+}
+
+.fachada,
+.fachada img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnails .thumbnail,
+.thumbnails a {
+  margin: 0;
+  padding: 0;
+}
+
+.thumbnails img {
+  width: 100%;
+  border: none;
+  border-bottom: solid 3px #e3e3e3;
+}
+
+.thumbnails a {
+  border-color: #e3e3e3;
+}
+
+.thumbnails img,
+.thumbnails .thumbnail {
+  border-radius: 0;
+}
+
+.container-top {
+  position: relative;
+  color: #FFF;
+}
+
+.container-top h1 {
+  font-size: 36px;
+  font-family: opensans-bolder;
+}
+
+.container-top p {
+  font-size: 18px;
+  font-family: opensans-semibold;
+}
+
+.container-top h1,
+.container-top p {
+  text-shadow: 0px 0px 15px #222;
+}
+
+.container-top-inner {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+@font-face {
+  font-family: opensans;
+  src: url(../app/../app/fonts/opensans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: opensans-light;
+  src: url(../app/../app/fonts/opensans/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: opensans-semibold;
+  src: url(../app/../app/fonts/opensans/OpenSans-Semibold.ttf);
+}
+
+@font-face {
+  font-family: opensans-bolder;
+  src: url(../app/../app/fonts/opensans/OpenSans-ExtraBold.ttf);
+}
+
+* {
+  font-family: opensans;
+}
+
+.col-proyecto {
+  color: #2A5D8C;
+  font-family: opensans-light;
+}
+
+.col-proyecto h3 {
+  font-size: 21px;
+}
+
+.col-proyecto p {
+  font-size: 18px;
+}
+
+.form-control {
+  border-color: #777777;
+}
+
+.form-control:focus {
+  border-color: #777777;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(119, 119, 119, .6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(119, 119, 119, .6);
+}
+
+.contact-form button {
+  border-color: #2A5D8C;
+  color: #2A5D8C;
+}
+
+.form-control,
+.contact-form button {
+  border-radius: 0px;
+  height: 48px;
+  font-size: 21px;
+}
+
+.row-contacto h3,
+.row-contacto p {
+  color: #2A5D8C;
+}
+
+.row-contacto h3 {
+  font-size: 21px;
+}
+
+.container-contacto h3,
+.container-contacto p {
+  text-align: center;
+}
+.col-marca-contacto {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.col-marca-contacto img {
+  max-width: 50%;
+  min-width: 50%;
+}
+
+.col-marca-contacto .marca-03 {
+  max-width: 90%;
+  min-width: 90%;
+}
+
+
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
+  .thumbnails {
+    margin-top: -50px;
   }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+  .col-proyecto {
+    margin-top: 100px;
+    margin-bottom: 250px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+  .container-contacto {
+    margin-top: 100px;
+  }
+  .container-contacto h3,
+  .container-contacto p {
+    text-align: left;
+  }
+  .col-proyecto h3 {
+    font-size: 36px;
+  }
+  .col-proyecto p {
+    font-size: 24px;
+    text-align: justify;
+  }
+  .marca-top {
+    margin-top: 100px;
+    margin-bottom: 340px;
+  }
+  .container-top p {
+    line-height: 36px;
+    font-size: 21px;
+  }
+  .container-top p,
+  .container-top h1 {
+    padding: 0;
+  }
+  .col-proyecto p {
+    line-height: 48px;
   }
 }
 #map-canvas {
-    height: 250px;
+    height: 300px;
     margin: 0;
     padding: 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    #map-canvas {
+        height: 500px;
+        margin: 0;
+        padding: 0;
+    }
 }.contact-form {
     margin-top: 20px;
 }
@@ -6898,6 +7088,11 @@ body {
     }
 }.footer {
     margin-top: 20px;
+    font-size: 11px;
+}
+
+.footer p {
+    text-align: center;
 }.modal-body img {
     width: 100%;
 }

@@ -26,53 +26,92 @@
 
   <body>
 
+    <div class="container-fluid container-top">
+      <div class="container container-top-inner">
+        <div class="row">
+          <img class="col-xs-12 col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 marca-top" src="app/img/marca-01.png">
+        </div>
+        <div class="row">
+          <h1 class="col-md-12 hidden-xs">CONCEPTO NEA</h1>
+          <p class="col-md-12">Es una firma dedicada a la generación de desarrollos inmobiliarios que junto al grupo FIDES y a la empresa constructora SCALA y a un equipo interdisciplinario de profesionales asociaciados, pretende seguir cada uno de los proyectos y desarrollos inmobiliarios, para lograr un producto eficiente al alcance de sus manos.</p>
+        </div>
+      </div>
+        <picture class="fachada">
+          <source 
+            media="(min-width: 768px)"
+            srcset="app/img/fachada-tablet.png">
+          <source 
+            media="(min-width: 992px)"
+            srcset="app/img/fachada-pc.png">
+          <source 
+            media="(min-width: 1200px)"
+            srcset="app/img/fachada-large.png">
+          <img 
+            src="app/img/fachada-mobile.png" 
+            alt="a cute kitten">
+        </picture>
+    </div>
+    <script type="text/template" id="modal-template">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <picture class="fachada">
+          <source 
+            media="(min-width: 768px)"
+            srcset="app/img/{{normal-img}}">
+          <img 
+            src="app/img/{{mobile-img}}" 
+            alt="a cute kitten">
+        </picture>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </script>
     <div class="container">
-
-      <div class="jumbotron"></div>
-
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <a class="thumbnail" data-toggle="modal" data-modal-title="foto interior" data-target="#thumbnail-modal">
-            <img src="app/img/interior1.jpg" alt="foto interior 1">
+      <div class="row thumbnails">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+          <a href="#" class="thumbnail"
+            data-toggle="modal"
+            data-modal-title="foto interior"
+            data-modal-image="modal-cocina.png"
+            data-modal-image-mobile="modal-cocina-mobile.png"
+            data-target="#thumbnail-modal">
+            <img src="app/img/thumbnail-01.png" alt="foto interior 2">
           </a>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <a href="#" class="thumbnail" data-toggle="modal" data-modal-title="foto interior"  data-target="#thumbnail-modal">
-            <img src="app/img/interior2.jpg" alt="foto interior 2">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+          <a href="#" class="thumbnail"
+            data-toggle="modal"
+            data-modal-image="modal-mesa.png"
+            data-modal-image-mobile="modal-mesa-mobile.png"
+            data-modal-title="foto interior"
+            data-target="#thumbnail-modal">
+            <img src="app/img/thumbnail-02.png" alt="foto interior 3">
           </a>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <a href="#" class="thumbnail" data-toggle="modal" data-modal-title="foto interior"  data-target="#thumbnail-modal">
-            <img src="app/img/interior3.jpg" alt="foto interior 3">
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <a href="#" class="thumbnail" data-toggle="modal" data-modal-title="foto interior"  data-target="#thumbnail-modal">
-            <img src="app/img/interior4.jpg" alt="foto interior 4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+          <a href="#" class="thumbnail"
+            data-toggle="modal"
+            data-modal-image="modal-terraza.png"
+            data-modal-image-mobile="modal-terraza-mobile.png"
+            data-modal-title="foto interior"
+            data-target="#thumbnail-modal">
+            <img src="app/img/thumbnail-03.png" alt="foto interior 4">
           </a>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-6">
-          <h2>Sub titulo</h2>
+        <div class="col-proyecto col-md-12">
+          <h2>PROYECTO</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            SUPERFICIE TOTAL: 1200 2 · PLANTA BAJA + 3 NIVELES · 2 LOCALES COMERCIALES EN
+            PB . MONO AMBIENTES DE 1, 2 Y 3 DORMITORIOS · COCHERAS . QUINCHO Y PARRILLAS
+            EN TERRAZA . PISCINA SOLARIUM EN TERRAZA · PARRILLA INDIVIDUALES EN BALCONES
           </p>
-        </div>
-        <div class="col-md-6">
-          <h2>Sub titulo</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
-
-      <div class="row row-centered">
-        <div class="col-xs-12 col-md-9 col-centered">
-          <div class="trade col-xs-12 col-md-4 col-centered"><div class="thumbnail">lorem ipsum</div></div>
-          <div class="trade col-xs-12 col-md-4 col-centered"><div class="thumbnail">lorem ipsum</div></div>
-          <div class="trade col-xs-12 col-md-4 col-centered"><div class="thumbnail">lorem ipsum</div></div>
         </div>
       </div>
 
@@ -82,41 +121,57 @@
 
         <!-- Modal content-->
         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"></h4>
-          </div>
-          <div class="modal-body">
-            
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-          </div>
+
         </div>
 
       </div>
     </div>
+  </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <div id="map-canvas"></div>
+
+  <div class="container-fluid container-mapa">
+    <div id="map-canvas"></div>
+  </div>
+
+  <div class="container container-contacto">
+
+      <div class="row row-contacto">
+        <div class="col-md-2 col-contacto">
+          <h3>CONTACTO</h3>
+          <p>
+            Av. Italia 1550<br>
+            0365 - 44885
+          </p>
+          <div class="row">
+            <div class="col-md-12 col-marca-contacto">
+              <img src="app/img/marca-02.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-marca-contacto">
+              <img class="marca-03" src="app/img/marca-03.png">
+            </div>
+          </div>
         </div>
-
-        <form class="contact-form col-md-6">
+        <form class="contact-form col-md-8 col-md-offset-2">
+          <h3>ESCRÍBANOS</h3>
           <div class="form-group">
-            <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+            <input type="text" class="form-control" name="nombre" placeholder="NOMBRE*" required>
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email" required>
+            <input type="email" class="form-control" name="email" placeholder="EMAIL*" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="mensaje" rows="3" required></textarea>
+            <textarea class="form-control" name="mensaje" rows="3" placeholder="MENSAJE*" required></textarea>
           </div>
-          <button type="submit" class="btn btn-default btn-block">Submit</button>
+          <div class="form-group">
+            <input type="text" class="form-control" name="telefono" placeholder="TELÉFONO">
+          </div>
+          <button type="submit" class="btn btn-default btn-block btn-enviar">ENVIAR</button>
         </form>
       </div>
       <footer class="footer row">
-        <p>&copy; Company 2014</p>
+        <p>Desarrollado por <strong>Liba</strong></p>
       </footer>
 
     </div> <!-- /container -->

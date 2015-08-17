@@ -1,5 +1,15 @@
 #map-canvas {
-    height: 250px;
+    height: 300px;
     margin: 0;
     padding: 0;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    #map-canvas {
+        height: 500px;
+        margin: 0;
+        padding: 0;
+    }
 }

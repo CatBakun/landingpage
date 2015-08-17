@@ -1,3 +1,8 @@
 .footer {
     margin-top: 20px;
+    font-size: 11px;
+}
+
+.footer p {
+    text-align: center;
 }

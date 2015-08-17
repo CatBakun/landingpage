@@ -6,6 +6,7 @@
     "qunit": "~1.11.0",
     "bootstrap": "~3.3.5",
     "require-css": "~0.1.8",
-    "requirejs-plugins": "~1.0.3"
+    "requirejs-plugins": "~1.0.3",
+    "srcset-poly": "*"
   }
 }

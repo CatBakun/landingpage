@@ -1,4 +1,4 @@
-/*! landingpage - v0.0.0 - 2015-07-19
+/*! landingpage - v0.0.0 - 2015-08-17
 * Copyright (c) 2015 Author Name; Licensed MIT */
 //Not using strict: uneven strict support in browsers, #392, and causes
 //problems with requirejs.exec()/transpiler plugins that may not be strict.
@@ -14063,18 +14063,22 @@ define('main',[
     '../app/js/ie10-viewport-bug-workaround'
 ], function($) {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 16,
-        center: {lat: -27.472346, lng: -58.832968} 
+        zoom: 17,
+        center: {lat: -27.442668, lng: -58.9684809}
     });
     new google.maps.Marker({
         position: map.getCenter(),
         map: map,
-        title: 'Click to zoom'
+        title: 'Av. Italia 1550'
     });
 
     $('[data-target="#thumbnail-modal"]').on('click', function(){
-        $('#thumbnail-modal .modal-body').html($(this).find('img').clone());
-        $('#thumbnail-modal .modal-title').html($(this).data('modal-title'));
+        $('#thumbnail-modal .modal-content').html(
+            $('#modal-template').text()
+            .replace('{{normal-img}}', $(this).data('modal-image'))
+            .replace('{{mobile-img}}', $(this).data('modal-image-mobile'))
+        );
+        $('#thumbnail-modal .modal-title').html('&nbsp');
     });
 
     $('form').on('submit', function(e){
