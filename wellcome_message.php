@@ -67,14 +67,15 @@
         </picture>
       </div>
     </script>
+    
     <div class="container">
       <div class="row thumbnails">
         <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
           <a href="#" class="thumbnail"
             data-toggle="modal"
             data-modal-title="foto interior"
-            data-modal-image="modal-cocina.png"
-            data-modal-image-mobile="modal-cocina-mobile.png"
+            data-modal-image="modal-cocina.jpg"
+            data-modal-image-mobile="modal-cocina-mobile.jpg"
             data-target="#thumbnail-modal">
             <img src="app/img/thumbnail-01.png" alt="foto interior 2">
           </a>
@@ -82,8 +83,8 @@
         <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
           <a href="#" class="thumbnail"
             data-toggle="modal"
-            data-modal-image="modal-mesa.png"
-            data-modal-image-mobile="modal-mesa-mobile.png"
+            data-modal-image="modal-mesa.jpg"
+            data-modal-image-mobile="modal-mesa-mobile.jpg"
             data-modal-title="foto interior"
             data-target="#thumbnail-modal">
             <img src="app/img/thumbnail-02.png" alt="foto interior 3">
@@ -92,8 +93,8 @@
         <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
           <a href="#" class="thumbnail"
             data-toggle="modal"
-            data-modal-image="modal-terraza.png"
-            data-modal-image-mobile="modal-terraza-mobile.png"
+            data-modal-image="modal-terraza.jpg"
+            data-modal-image-mobile="modal-terraza-mobile.jpg"
             data-modal-title="foto interior"
             data-target="#thumbnail-modal">
             <img src="app/img/thumbnail-03.png" alt="foto interior 4">
