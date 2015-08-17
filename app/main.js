@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'async!https://maps.googleapis.com/maps/api/js?v=3.exp',
+    //'async!https://maps.googleapis.com/maps/api/js?v=3.exp',
     'bootstrapJS',
     'css!bootstrapCSS',
     'css!../app/css/jumbotron-narrow.css',
@@ -10,7 +10,7 @@ define([
     'css!../app/css/modal.css',
     '../app/js/ie10-viewport-bug-workaround'
 ], function($) {
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+/*    var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 17,
         scrollwheel: false,
         navigationControl: false,
@@ -24,7 +24,7 @@ define([
         map: map,
         title: 'Av. Italia 1550'
     });
-
+*/
     $('[data-target="#thumbnail-modal"]').on('click', function(){
         $('#thumbnail-modal .modal-content').html(
             $('#modal-template').text()
