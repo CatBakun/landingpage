@@ -7096,3 +7096,14 @@ html,
 }.modal-body img {
     width: 100%;
 }
+
+.modal-body {
+    margin: 0;
+    padding: 0;
+}
+
+@media(min-width:1200px) {
+    .modal-wide .modal-dialog {
+      width: 940px;
+    }
+}

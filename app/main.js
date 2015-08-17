@@ -12,6 +12,11 @@ define([
 ], function($) {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 17,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false,
         center: {lat: -27.442668, lng: -58.9684809}
     });
     new google.maps.Marker({
@@ -31,24 +36,24 @@ define([
 
     $('form').on('submit', function(e){
         e.preventDefault();
-        $('#thumbnail-modal .modal-title').text('Espre');
-        $('#thumbnail-modal .modal-body').text('Su mensaje se esta enviando');
-        $('#thumbnail-modal .modal-body').attr('disabled', 'disabled');
-        $('#thumbnail-modal').one('shown.bs.modal', function(){
+        $('#message-modal .modal-title').text('Espre');
+        $('#message-modal .modal-body').text('Su mensaje se esta enviando');
+        $('#message-modal .modal-body').attr('disabled', 'disabled');
+        $('#message-modal').one('shown.bs.modal', function(){
             $.post( "/index.php/contact", $( "form" ).serialize())
             .done(function(){
-                $('#thumbnail-modal .modal-title').text('Mensaje enviado');
-                $('#thumbnail-modal .modal-body').text('Nos vamos a contactar con usted.');
+                $('#message-modal .modal-title').text('Mensaje enviado');
+                $('#message-modal .modal-body').text('Nos vamos a contactar con usted.');
                 $('form').find('input, textarea').val('');
             })
             .fail(function(){
-                $('#thumbnail-modal .modal-title').text('No se envió el mensaje ');
-                $('#thumbnail-modal .modal-body').text('Verifique su conexion a internet o intente mas tarde.');
+                $('#message-modal .modal-title').text('No se envió el mensaje ');
+                $('#message-modal .modal-body').text('Verifique su conexion a internet o intente mas tarde.');
             })
             .always(function(){
-                $('#thumbnail-modal .modal-body').removeAttr('disabled');
+                $('#message-modal .modal-body').removeAttr('disabled');
             });
         });
-        $('#thumbnail-modal').modal('show');
+        $('#message-modal').modal('show');
     });
 });

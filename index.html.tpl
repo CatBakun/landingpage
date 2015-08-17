@@ -52,7 +52,7 @@
         </picture>
     </div>
     <script type="text/template" id="modal-template">
-      <div class="modal-header">
+      <div class="modal-header hidden-md hidden-lg">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title"></h4>
       </div>
@@ -65,9 +65,6 @@
             src="app/img/{{mobile-img}}" 
             alt="a cute kitten">
         </picture>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
       </div>
     </script>
     <div class="container">
@@ -116,18 +113,32 @@
       </div>
 
       <!-- Modal -->
-    <div id="thumbnail-modal" class="modal fade" role="dialog">
+    <div id="thumbnail-modal" class="modal fade modal-wide" role="dialog">
       <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
-
         </div>
-
       </div>
     </div>
   </div>
 
+
+  <div id="message-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid container-mapa">
     <div id="map-canvas"></div>
