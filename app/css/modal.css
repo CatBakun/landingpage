@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+.modal-backdrop {
+    opacity:0.8 !important;
+}
+
 @media(min-width:1200px) {
     .modal-wide .modal-dialog {
       width: 940px;
