@@ -6915,12 +6915,14 @@ html,
 
 .container-top h1 {
   font-size: 36px;
-  font-family: opensans-bolder;
+  font-family: 'Open Sans',  'sans-serif';
+  font-weight: 800;
 }
 
 .container-top p {
   font-size: 18px;
-  font-family: opensans-semibold;
+  font-family: 'Open Sans', 'sans-serif';
+  font-weight: 600;
 }
 
 .container-top h1,
@@ -6936,33 +6938,14 @@ html,
   right: 0;
 }
 
-@font-face {
-  font-family: opensans;
-  src: url(../app/../app/fonts/opensans/OpenSans-Regular.ttf);
-}
-
-@font-face {
-  font-family: opensans-light;
-  src: url(../app/../app/fonts/opensans/OpenSans-Light.ttf);
-}
-
-@font-face {
-  font-family: opensans-semibold;
-  src: url(../app/../app/fonts/opensans/OpenSans-Semibold.ttf);
-}
-
-@font-face {
-  font-family: opensans-bolder;
-  src: url(../app/../app/fonts/opensans/OpenSans-ExtraBold.ttf);
-}
-
 * {
-  font-family: opensans;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .col-proyecto {
   color: #2A5D8C;
-  font-family: opensans-light;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
 }
 
 .col-proyecto h3 {

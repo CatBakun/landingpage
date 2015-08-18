@@ -38,6 +38,7 @@
 
   <body>
     <div id="loading"></div>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800' rel='stylesheet' type='text/css'>
     <div class="container-fluid container-top">
       <div class="container container-top-inner">
         <div class="row">
