@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Parallax</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		.bg {
+		  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+		  	url('image.jpg');
+		  background-size: cover; 
+		  position: fixed;
+		  width: 100%;
+		  height: 300%;
+		  top:0;
+		  left:0;
+		  z-index: -1;
+		}
+		section {
+		  color: #fff;
+		  font-family: arial;
+		  width: 940px;
+		  margin: auto;
+		  line-height: 20px;
+		  font-size: 16px;
+		}
+		.section-inner,
+		.band {
+			width: 100%;
+			position: absolute;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.section-inner {
+			position: relative;
+		}
+		section.img-wrap,
+		.img-wrap {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+		#menu {
+			position: fixed;
+			background-color: rgba(0,0,0,0.5);
+			margin: 0;
+			padding: 10px;
+			-webkit-animation-name: big;
+    		-webkit-animation-duration: 0.5s;
+			padding-top: 50px;
+			font-size: 16px;
+			width: 100%;
+			z-index: 1;
+		}
+		#menu.small {
+			-webkit-animation-name: small;
+    		-webkit-animation-duration: 0.5s;
+    		padding-top: 15px;
+    		font-size: 14px;
+		}
+		/* The animation code */
+		@-webkit-keyframes small {
+		    from {
+		    	padding-top: 50px;
+		    	font-size: 16px;
+	    	}
+		    to {
+		    	padding-top: 15px;
+		    	font-size: 14px;
+		    }
+		}
+		@-webkit-keyframes big {
+		    from {
+		    	padding-top: 15px;
+		    	font-size: 14px;
+		    }
+		    to {
+		    	padding-top: 50px;
+		    	font-size: 16px;
+		    }
+		}
+
+		#menu:after {
+			content: "";
+			display: block;
+			clear: both;
+		} 
+
+		#menu li {
+			display: inline-block;
+			min-width: 15%;
+			float: right;
+		}
+
+		#menu li a {
+			color: #FFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-family: sans-serif;
+		}
+		#menu li#menu-brand {
+			float: left;
+			margin-left: 5px;
+		}
+
+		#start {
+			padding-top: 80px;
+		}
+
+		.marca-top {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+
+		.thumbnails {
+			width: auto;
+		}
+
+		input,
+		textarea,
+		button {
+			width: 100%;
+			height: 50px;
+			background-color: rgba(0,0,0,0);
+			box-sizing: border-box;
+			margin-bottom: 10px;
+			font-size: 21px;
+			color: white;
+			border-color: #FFF;
+			border-width: 2px;
+			padding: 15px;
+		}
+
+		.scroll-command {
+			position: fixed;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0%);
+			cursor: pointer;
+		}
+		.scroll-command .rotate-animation {
+			display: block;
+			font-size: 50px;
+			color: #FFF;
+			-webkit-animation-name: rotate;
+    		-webkit-animation-duration: 0.7s;
+		    -ms-transform: rotate(90deg); /* IE 9 */
+		    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		    transform: rotate(90deg);
+		}
+
+		/* The animation code */
+		@-webkit-keyframes rotate {
+		    from {
+		    	-ms-transform: rotate(0deg); /* IE 9 */
+		    	-webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		    	transform: rotate(0deg)
+		    }
+		    to {
+		    	-ms-transform: rotate(90deg); /* IE 9 */
+		    	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+		    	transform: rotate(90deg)
+		    }
+		}
+
+		@-webkit-keyframes NAME-YOUR-ANIMATION {
+		  0%   { opacity: 0; }
+		  100% { opacity: 1; }
+		}
+		@-moz-keyframes NAME-YOUR-ANIMATION {
+		  0%   { opacity: 0; }
+		  100% { opacity: 1; }
+		}
+		@-o-keyframes NAME-YOUR-ANIMATION {
+		  0%   { opacity: 0; }
+		  100% { opacity: 1; }
+		}
+		@keyframes NAME-YOUR-ANIMATION {
+		  0%   { opacity: 0; }
+		  100% { opacity: 1; }
+		}
+
+		.loop-opacity {
+			-webkit-animation: NAME-YOUR-ANIMATION 5s infinite; /* Safari 4+ */
+			-moz-animation:    NAME-YOUR-ANIMATION 5s infinite; /* Fx 5+ */
+			-o-animation:      NAME-YOUR-ANIMATION 5s infinite; /* Opera 12+ */
+			animation:         NAME-YOUR-ANIMATION 5s infinite; /* IE 10+, Fx 29+ */
+		}
+	</style>
+</head>
+<body>
+<ul id="menu">
+	<li id="menu-brand"><a href="#">BRAND</a></li>
+	<li><a href="#start">Inicio</a></li>
+	<li><a id="link-galeria" href="#galeria">Galeria</a></li>
+	<li><a href="#proyecto">Proyecto</a></li>
+	<li><a href="#contact">Contacto</a></li>
+</ul>
+<section id="start">
+	<div class="section-inner">
+		<img class="marca-top" src="marca-01.png" />
+		<h1>Home page</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</div>
+</section>
+
+<section id="galeria" class="img-wrap">
+	<div class="band">
+		<div class="thumbnails">
+			<img src="thumbnail-01.jpg"/>
+			<img src="thumbnail-02.jpg"/>
+			<img src="thumbnail-03.jpg"/>
+			<img src="thumbnail-04.jpg"/>
+		</div>
+	</div>
+</section>
+
+<section id="proyecto">
+	<div class="section-inner">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</div>	
+</section>
+
+<section id="mapa">
+	<div class="img-wrap">
+		<div class="band" alt=""></div>
+	</div>
+</section>
+
+<section id="contact">
+	<div class="section-inner">
+		<form class="contact-form col-md-8 col-md-offset-2">
+          <h3>ESCRÍBANOS</h3>
+          <div class="form-group">
+            <input type="text" class="form-control" name="nombre" placeholder="NOMBRE*" required="">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="EMAIL*" required="">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="mensaje" rows="3" placeholder="MENSAJE*" required=""></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="telefono" placeholder="TELÉFONO">
+          </div>
+          <button type="submit" class="btn btn-default btn-block btn-enviar">ENVIAR</button>
+        </form>
+	</div>
+</section>
+<div class="bg"> </div>
+<div class="scroll-command">
+	<span class="rotate-animation">
+		<span class="loop-opacity">&raquo;</span>
+	</span>
+</div>
+	
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('section').height($(window).height() + 100);
+		function parallax(){
+		    var scrolled = $(window).scrollTop();
+		    if(scrolled){
+		    	$('#menu').addClass('small');
+		    } else {
+		    	$('#menu').removeClass('small');
+		    }
+		    $('.bg').css('top', -(scrolled * 0.2) + 'px');
+		}
+		$(window).scroll(function(e){
+		    parallax();
+		});
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	});
+</script>
+</body>
+</html>
