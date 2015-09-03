@@ -79,6 +79,7 @@ html,
 
 .marca-top {
   margin-top: 10px;
+  /* width: 50%; */
 }
 
 .fachada,
@@ -120,7 +121,7 @@ html,
 }
 
 .container-top p {
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'Open Sans', 'sans-serif';
   font-weight: 600;
 }
@@ -246,9 +247,10 @@ html,
   .col-proyecto p {
     line-height: 48px;
   }
-  .row.thumbnails {
-    margin: 0;
-  }
+}
+
+.row.thumbnails {
+  margin: 0;
 }
 
 .thumbnail-col {
