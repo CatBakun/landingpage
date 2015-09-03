@@ -209,19 +209,20 @@ html,
 
 
 @media screen and (min-width: 768px) {
-  .thumbnails {
-    margin-top: -50px;
-  }
   .col-proyecto {
     margin-top: 100px;
-    margin-bottom: 250px;
+    margin-bottom: 100px;
   }
   .container-contacto {
     margin-top: 100px;
   }
-  .container-contacto h3,
-  .container-contacto p {
+  .contact-form h3,
+  .contact-form p {
     text-align: left;
+  }
+  .col-contacto h3,
+  .col-contact p {
+    text-align: center;
   }
   .col-proyecto h3 {
     font-size: 36px;
@@ -232,7 +233,7 @@ html,
   }
   .marca-top {
     margin-top: 100px;
-    margin-bottom: 340px;
+    margin-bottom: 100px;
   }
   .container-top p {
     line-height: 36px;
@@ -245,4 +246,11 @@ html,
   .col-proyecto p {
     line-height: 48px;
   }
+  .row.thumbnails {
+    margin: 0;
+  }
+}
+
+.thumbnail-col {
+  padding: 0;
 }

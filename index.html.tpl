@@ -38,19 +38,20 @@
       </div>
         <picture class="fachada">
           <source 
-            media="(min-width: 768px)"
-            srcset="app/img/fachada-tablet.jpg">
+            media="(min-width: 1200px)"
+            srcset="app/img/fachada-large.jpg">
           <source 
             media="(min-width: 992px)"
             srcset="app/img/fachada-pc.jpg">
           <source 
-            media="(min-width: 1200px)"
-            srcset="app/img/fachada-large.jpg">
+            media="(min-width: 768px)"
+            srcset="app/img/fachada-tablet.jpg">
           <img 
             src="app/img/fachada-mobile.jpg" 
-            alt="a cute kitten">
+            alt="">
         </picture>
     </div>
+
     <script type="text/template" id="modal-template">
       <div class="modal-header hidden-md hidden-lg">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -67,10 +68,20 @@
         </picture>
       </div>
     </script>
-    
-    <div class="container">
+
+    <div class="container-fluid">
       <div class="row thumbnails">
-        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+        <div class="thumbnail-col col-xs-6 col-sm-3 col-md-3 col-xl-3">
+          <a href="#" class="thumbnail"
+            data-toggle="modal"
+            data-modal-title="foto interior"
+            data-modal-image="modal-prototipos.jpg"
+            data-modal-image-mobile="modal-prototipos-mobile.jpg"
+            data-target="#thumbnail-modal">
+            <img src="app/img/thumbnail-00.jpg" alt="foto interior 2">
+          </a>
+        </div>
+        <div class="thumbnail-col col-xs-6 col-sm-3 col-md-3 col-xl-3">
           <a href="#" class="thumbnail"
             data-toggle="modal"
             data-modal-title="foto interior"
@@ -80,7 +91,7 @@
             <img src="app/img/thumbnail-01.jpg" alt="foto interior 2">
           </a>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+        <div class="thumbnail-col col-xs-6 col-sm-3 col-md-3 col-xl-3">
           <a href="#" class="thumbnail"
             data-toggle="modal"
             data-modal-image="modal-mesa.jpg"
@@ -90,7 +101,7 @@
             <img src="app/img/thumbnail-02.jpg" alt="foto interior 3">
           </a>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+        <div class="thumbnail-col col-xs-6 col-sm-3 col-md-3 col-xl-3">
           <a href="#" class="thumbnail"
             data-toggle="modal"
             data-modal-image="modal-terraza.jpg"
@@ -101,18 +112,6 @@
           </a>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-proyecto col-md-12">
-          <h2>PROYECTO</h2>
-          <p>
-            SUPERFICIE TOTAL: 1200 m2 · PLANTA BAJA + 3 NIVELES · 2 LOCALES COMERCIALES EN
-            PB · MONO AMBIENTES DE 1, 2 Y 3 DORMITORIOS · COCHERAS · QUINCHO Y PARRILLAS
-            EN TERRAZA · PISCINA SOLARIUM EN TERRAZA · PARRILLA INDIVIDUALES EN BALCONES
-          </p>
-        </div>
-      </div>
-
       <!-- Modal -->
     <div id="thumbnail-modal" class="modal fade modal-wide" role="dialog">
       <div class="modal-dialog">
@@ -123,6 +122,18 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-proyecto col-md-12">
+        <h2>PROYECTO</h2>
+        <p>
+          SUPERFICIE TOTAL: 1200 m2 · PLANTA BAJA + 3 NIVELES · 2 LOCALES COMERCIALES EN
+          PB · MONO AMBIENTES DE 1, 2 Y 3 DORMITORIOS · COCHERAS · QUINCHO Y PARRILLAS
+          EN TERRAZA · PISCINA SOLARIUM EN TERRAZA · PARRILLA INDIVIDUALES EN BALCONES
+        </p>
+      </div>
+    </div>
+  </div>
 
   <div id="message-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -183,7 +194,7 @@
         </form>
       </div>
       <footer class="footer row">
-        <p>Desarrollado por <a href="http://liba.com.ar/"><strong>Liba</strong></a></p>
+        <p>Desarrollado por <a href="https://www.facebook.com/estudioliba"><strong>Liba</strong></a></p>
       </footer>
 
     </div> <!-- /container -->
