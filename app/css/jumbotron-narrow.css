@@ -210,6 +210,9 @@ html,
 
 
 @media screen and (min-width: 768px) {
+  .col-concepto.col-proyecto {
+    margin-bottom: 0px;
+  }
   .col-proyecto {
     margin-top: 100px;
     margin-bottom: 100px;

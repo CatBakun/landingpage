@@ -1,4 +1,4 @@
-/*! landingpage - v0.0.0 - 2015-09-02
+/*! landingpage - v0.0.0 - 2015-09-07
 * Copyright (c) 2015 Author Name; Licensed MIT */
 //Not using strict: uneven strict support in browsers, #392, and causes
 //problems with requirejs.exec()/transpiler plugins that may not be strict.
